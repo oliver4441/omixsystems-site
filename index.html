@@ -56,62 +56,6 @@
         .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
         .page-section { padding: 5rem 1.5rem; position: relative; }
 
-        /* ---- PRELOADER ---- */
-        #preloader {
-            position: fixed; inset: 0; z-index: 9999;
-            background: var(--bg-dark);
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-        }
-        #preloader.hidden { opacity: 0; visibility: hidden; }
-        .preloader-glow-1 {
-            position: absolute; top: 30%; left: 25%;
-            width: 200px; height: 200px;
-            background: var(--accent); border-radius: 50%;
-            opacity: 0.15; filter: blur(100px); pointer-events: none;
-        }
-        .preloader-glow-2 {
-            position: absolute; bottom: 30%; right: 25%;
-            width: 180px; height: 180px;
-            background: var(--accent-cyan); border-radius: 50%;
-            opacity: 0.1; filter: blur(100px); pointer-events: none;
-        }
-        .preloader-content { position: relative; z-index: 10; width: 100%; max-width: 360px; padding: 0 1.5rem; text-align: center; }
-        .preloader-logo { display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.5rem; }
-        .preloader-logo-icon {
-            width: 40px; height: 40px; border-radius: 10px;
-            background: var(--accent); color: #fff;
-            display: flex; align-items: center; justify-content: center;
-            font-weight: 700; font-size: 1.2rem;
-        }
-        .preloader-logo-text { font-weight: 700; font-size: 1.5rem; color: #fff; }
-        .preloader-logo-text span { color: #8888AA; }
-        .preloader-tagline { color: var(--accent-cyan); font-size: 0.85rem; font-weight: 500; margin-bottom: 2rem; }
-        .preloader-card {
-            background: rgba(19,19,26,0.8);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 16px; padding: 1.25rem;
-            margin-bottom: 1.5rem;
-            backdrop-filter: blur(12px);
-        }
-        .preloader-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem; }
-        .preloader-stat-val { font-size: 1.25rem; font-weight: 700; color: #fff; font-family: 'JetBrains Mono', monospace; }
-        .preloader-stat-label { font-size: 0.65rem; color: #8888AA; text-transform: uppercase; letter-spacing: 0.05em; }
-        .preloader-divider { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.75rem; margin-bottom: 0.75rem; }
-        .preloader-services { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-        .preloader-service-tag {
-            padding: 0.2rem 0.5rem; font-size: 0.65rem; color: var(--accent-cyan); font-weight: 500;
-            background: rgba(108,99,255,0.1); border: 1px solid rgba(108,99,255,0.2); border-radius: 4px;
-        }
-        .preloader-contact { display: flex; flex-direction: column; gap: 0.4rem; }
-        .preloader-contact-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: #8888AA; }
-        .preloader-contact-item span { color: var(--accent-cyan); }
-        .preloader-progress-bar { width: 100%; height: 4px; background: rgba(255,255,255,0.05); border-radius: 999px; overflow: hidden; margin-bottom: 0.5rem; }
-        .preloader-progress-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--accent-cyan)); width: 0%; transition: width 0.1s linear; }
-        .preloader-loading-text { font-size: 0.65rem; color: #8888AA; text-transform: uppercase; letter-spacing: 0.1em; }
-        .preloader-bottom { position: absolute; bottom: 1.5rem; font-size: 0.65rem; color: #8888AA; letter-spacing: 0.05em; }
-
         /* ---- NAVIGATION ---- */
         nav {
             position: fixed; top: 0; left: 0; right: 0; z-index: 50;
@@ -542,50 +486,6 @@
     </style>
 </head>
 <body>
-
-    <!-- PRELOADER -->
-    <div id="preloader">
-        <div class="preloader-glow-1"></div>
-        <div class="preloader-glow-2"></div>
-        <div class="preloader-content">
-            <div class="preloader-logo">
-                <div class="preloader-logo-icon">o</div>
-                <span class="preloader-logo-text">omix<span>systems</span></span>
-            </div>
-            <p class="preloader-tagline">Optimal Modular Integration Experts</p>
-            <div class="preloader-card">
-                <div class="preloader-stats">
-                    <div>
-                        <div class="preloader-stat-val mono">150+</div>
-                        <div class="preloader-stat-label">Projects</div>
-                    </div>
-                    <div>
-                        <div class="preloader-stat-val mono">50+</div>
-                        <div class="preloader-stat-label">Clients</div>
-                    </div>
-                </div>
-                <div class="preloader-divider">
-                    <div class="preloader-stat-label" style="margin-bottom:0.5rem">Services</div>
-                    <div class="preloader-services">
-                        <span class="preloader-service-tag">SaaS Dev</span>
-                        <span class="preloader-service-tag">Web Dev</span>
-                        <span class="preloader-service-tag">Mobile Apps</span>
-                        <span class="preloader-service-tag">APIs</span>
-                    </div>
-                </div>
-                <div class="preloader-divider">
-                    <div class="preloader-stat-label" style="margin-bottom:0.5rem">Contact</div>
-                    <div class="preloader-contact">
-                        <div class="preloader-contact-item"><span>&#9993;</span> omixsystems@gmail.com</div>
-                        <div class="preloader-contact-item"><span>&#128205;</span> Kericho, Kenya</div>
-                    </div>
-                </div>
-            </div>
-            <div class="preloader-progress-bar"><div class="preloader-progress-fill" id="preloader-progress"></div></div>
-            <p class="preloader-loading-text">Loading...</p>
-        </div>
-        <div class="preloader-bottom">Fast, Conversion-Focused Websites</div>
-    </div>
 
     <!-- NAVIGATION -->
     <nav id="navbar">

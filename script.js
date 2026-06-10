@@ -1,38 +1,6 @@
 (function() {
     'use strict';
 
-    // ---- PRELOADER ----
-    var progressBar = document.getElementById('preloader-progress');
-    var preloader = document.getElementById('preloader');
-    var duration = 2500;
-    var interval = 25;
-    var steps = duration / interval;
-    var current = 0;
-
-    var timer = setInterval(function() {
-        current++;
-        var pct = Math.min((current / steps) * 100, 100);
-        if (progressBar) progressBar.style.width = pct + '%';
-        if (current >= steps) clearInterval(timer);
-    }, interval);
-
-    function hidePreloader() {
-        if (preloader && !preloader.classList.contains('hidden')) {
-            preloader.classList.add('hidden');
-        }
-    }
-
-    // Hide preloader when page is fully loaded
-    if (document.readyState === 'complete') {
-        setTimeout(hidePreloader, duration + 300);
-    } else {
-        window.addEventListener('load', function() {
-            setTimeout(hidePreloader, 300);
-        });
-    }
-    // Fallback: always hide after 4 seconds max
-    setTimeout(hidePreloader, 4000);
-
     // ---- NAVIGATION ----
     var navbar = document.getElementById('navbar');
     var mobileMenuBtn = document.getElementById('mobile-menu-btn');
