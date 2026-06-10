@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>omixsystems - Optimal Modular Integration Experts | SaaS & Web Development</title>
+    <meta name="description" content="Optimal Modular Integration Experts building scalable SaaS platforms, high-converting websites, and modern mobile applications. Based in Kericho, Kenya.">
+    <meta name="keywords" content="omixsystems, SaaS development Kenya, web development Kenya, mobile app development, modular integration, tech experts Kericho">
+    <meta name="author" content="omixsystems">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://omixsystems.store/">
+    <meta property="og:title" content="omixsystems - Optimal Modular Integration Experts">
+    <meta property="og:description" content="Building modern SaaS solutions and high-performance digital products for tomorrow's businesses.">
+    <meta property="og:image" content="https://omixsystems.store/favicon.png">
+    <meta property="og:url" content="https://omixsystems.store/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="omixsystems">
+    <meta property="og:locale" content="en_KE">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="omixsystems - Optimal Modular Integration Experts">
+    <meta name="twitter:description" content="Building modern SaaS solutions and high-performance digital products for tomorrow's businesses.">
+    <meta name="twitter:image" content="https://omixsystems.store/favicon.png">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "omixsystems",
+        "description": "Optimal Modular Integration Experts building scalable SaaS platforms and high-converting websites. Based in Kericho, Kenya.",
+        "url": "https://omixsystems.store/",
+        "email": "omixsystems@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Kericho", "addressCountry": "KE" },
+        "sameAs": []
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0A0A0F;
+            --bg-soft: #111827;
+            --text-primary: #f5f5f5;
+            --text-secondary: #9ca3af;
+            --accent: #6C63FF;
+            --accent-cyan: #00D4FF;
+            --secondary: #3b82f6;
+            --green: #22c55e;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .page-section { padding: 5rem 1.5rem; position: relative; }
+
+        /* ---- PRELOADER ---- */
+        #preloader {
+            position: fixed; inset: 0; z-index: 9999;
+            background: var(--bg-dark);
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        #preloader.hidden { opacity: 0; visibility: hidden; }
+        .preloader-glow-1 {
+            position: absolute; top: 30%; left: 25%;
+            width: 200px; height: 200px;
+            background: var(--accent); border-radius: 50%;
+            opacity: 0.15; filter: blur(100px); pointer-events: none;
+        }
+        .preloader-glow-2 {
+            position: absolute; bottom: 30%; right: 25%;
+            width: 180px; height: 180px;
+            background: var(--accent-cyan); border-radius: 50%;
+            opacity: 0.1; filter: blur(100px); pointer-events: none;
+        }
+        .preloader-content { position: relative; z-index: 10; width: 100%; max-width: 360px; padding: 0 1.5rem; text-align: center; }
+        .preloader-logo { display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+        .preloader-logo-icon {
+            width: 40px; height: 40px; border-radius: 10px;
+            background: var(--accent); color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.2rem;
+        }
+        .preloader-logo-text { font-weight: 700; font-size: 1.5rem; color: #fff; }
+        .preloader-logo-text span { color: #8888AA; }
+        .preloader-tagline { color: var(--accent-cyan); font-size: 0.85rem; font-weight: 500; margin-bottom: 2rem; }
+        .preloader-card {
+            background: rgba(19,19,26,0.8);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px; padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(12px);
+        }
+        .preloader-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem; }
+        .preloader-stat-val { font-size: 1.25rem; font-weight: 700; color: #fff; font-family: 'JetBrains Mono', monospace; }
+        .preloader-stat-label { font-size: 0.65rem; color: #8888AA; text-transform: uppercase; letter-spacing: 0.05em; }
+        .preloader-divider { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.75rem; margin-bottom: 0.75rem; }
+        .preloader-services { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .preloader-service-tag {
+            padding: 0.2rem 0.5rem; font-size: 0.65rem; color: var(--accent-cyan); font-weight: 500;
+            background: rgba(108,99,255,0.1); border: 1px solid rgba(108,99,255,0.2); border-radius: 4px;
+        }
+        .preloader-contact { display: flex; flex-direction: column; gap: 0.4rem; }
+        .preloader-contact-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: #8888AA; }
+        .preloader-contact-item span { color: var(--accent-cyan); }
+        .preloader-progress-bar { width: 100%; height: 4px; background: rgba(255,255,255,0.05); border-radius: 999px; overflow: hidden; margin-bottom: 0.5rem; }
+        .preloader-progress-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--accent-cyan)); width: 0%; transition: width 0.1s linear; }
+        .preloader-loading-text { font-size: 0.65rem; color: #8888AA; text-transform: uppercase; letter-spacing: 0.1em; }
+        .preloader-bottom { position: absolute; bottom: 1.5rem; font-size: 0.65rem; color: #8888AA; letter-spacing: 0.05em; }
+
+        /* ---- NAVIGATION ---- */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+            transition: all 0.3s ease;
+        }
+        nav.scrolled {
+            background: rgba(10,10,15,0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+        }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; transition: padding 0.3s; }
+        nav.scrolled .nav-inner { padding: 0.6rem 0; }
+        .nav-logo { font-size: 1.4rem; font-weight: 700; color: #fff; cursor: pointer; text-decoration: none; }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: none; align-items: center; gap: 0.25rem; }
+        .nav-links a {
+            padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem; font-weight: 500;
+            color: var(--text-secondary); text-decoration: none; transition: all 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-cyan); background: rgba(255,255,255,0.05); }
+        .nav-cta {
+            margin-left: 1rem; padding: 0.5rem 1.25rem; font-size: 0.875rem;
+            background: linear-gradient(135deg, var(--accent), #5a52d5);
+            color: #fff; border: none; border-radius: 8px; font-weight: 500;
+            cursor: pointer; text-decoration: none; display: inline-block;
+            box-shadow: 0 4px 15px rgba(108,99,255,0.25);
+            transition: box-shadow 0.3s;
+        }
+        .nav-cta:hover { box-shadow: 0 4px 20px rgba(108,99,255,0.4); }
+        .nav-mobile-btn { display: block; background: none; border: none; color: #fff; cursor: pointer; padding: 0.5rem; }
+        .nav-mobile-btn svg { width: 24px; height: 24px; }
+        .nav-mobile-menu {
+            display: none; padding-bottom: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 0.5rem; padding-top: 1rem;
+        }
+        .nav-mobile-menu.open { display: block; }
+        .nav-mobile-menu a {
+            display: block; padding: 0.75rem 1rem; color: var(--text-secondary);
+            text-decoration: none; font-size: 0.875rem; border-radius: 8px;
+        }
+        .nav-mobile-menu a:hover { color: #fff; background: rgba(255,255,255,0.05); }
+        @media (min-width: 1024px) {
+            .nav-links { display: flex; }
+            .nav-mobile-btn { display: none; }
+        }
+
+        /* ---- HERO ---- */
+        #home {
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden; padding-top: 5rem;
+        }
+        .hero-bg { position: absolute; inset: 0; }
+        .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-bg-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(10,10,15,0.9), rgba(10,10,15,0.8), var(--bg-dark));
+        }
+        .hero-glow-1 {
+            position: absolute; top: 25%; left: 25%;
+            width: 400px; height: 400px; background: var(--secondary);
+            border-radius: 50%; filter: blur(128px); opacity: 0.1; pointer-events: none;
+        }
+        .hero-glow-2 {
+            position: absolute; bottom: 25%; right: 25%;
+            width: 400px; height: 400px; background: var(--accent-cyan);
+            border-radius: 50%; filter: blur(128px); opacity: 0.08; pointer-events: none;
+        }
+        .hero-content { position: relative; z-index: 10; text-align: center; max-width: 800px; padding: 2rem 0; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.5rem 1rem; background: rgba(59,130,246,0.1);
+            border: 1px solid rgba(59,130,246,0.2); border-radius: 999px;
+            color: #60a5fa; font-size: 0.875rem; font-weight: 500; margin-bottom: 2rem;
+        }
+        .hero-badge-dot {
+            width: 8px; height: 8px; background: #3b82f6; border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        .hero-title {
+            font-size: clamp(2.2rem, 6vw, 4.2rem); font-weight: 700;
+            line-height: 1.1; margin-bottom: 1.5rem; color: #fff;
+        }
+        .hero-title-gradient {
+            background: linear-gradient(135deg, #60a5fa, #22d3ee);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-desc {
+            font-size: clamp(1rem, 2vw, 1.2rem); color: #94a3b8;
+            line-height: 1.7; max-width: 600px; margin: 0 auto 2rem;
+        }
+        .hero-desc strong { color: #fff; font-weight: 600; }
+        .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 2.5rem; }
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.875rem 1.75rem; border-radius: 10px; font-weight: 600;
+            font-size: 1rem; text-decoration: none; transition: all 0.3s; cursor: pointer; border: none;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), #5a52d5);
+            color: #fff; box-shadow: 0 4px 20px rgba(108,99,255,0.3);
+        }
+        .btn-primary:hover { box-shadow: 0 4px 25px rgba(108,99,255,0.5); transform: translateY(-1px); }
+        .btn-outline {
+            background: transparent; color: #d1d5db;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .btn-outline:hover { border-color: rgba(255,255,255,0.3); color: #fff; }
+        .hero-features { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-bottom: 2.5rem; }
+        .hero-feature { display: flex; align-items: center; gap: 0.75rem; }
+        .hero-feature-icon {
+            width: 24px; height: 24px; border-radius: 50%;
+            background: rgba(34,197,94,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .hero-feature-icon svg { width: 14px; height: 14px; color: #4ade80; }
+        .hero-feature-text { text-align: left; }
+        .hero-feature-label { font-size: 0.875rem; font-weight: 600; color: #fff; }
+        .hero-feature-desc { font-size: 0.75rem; color: var(--text-secondary); }
+        .hero-stats { display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: center; }
+        .hero-stat-val { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; color: #fff; }
+        .hero-stat-label { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem; }
+        .hero-scroll {
+            position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+            display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+        }
+        .hero-scroll span { font-size: 0.75rem; color: var(--text-secondary); }
+        .hero-scroll-indicator {
+            width: 20px; height: 32px; border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 999px; display: flex; justify-content: center; padding-top: 6px;
+        }
+        .hero-scroll-indicator div {
+            width: 4px; height: 8px; background: rgba(255,255,255,0.4);
+            border-radius: 999px; animation: bounce 1.5s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(6px); }
+        }
+
+        /* ---- GLASS CARDS ---- */
+        .glass-card {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+        .glass-card:hover { transform: translateY(-4px); }
+
+        /* ---- SECTION HEADERS ---- */
+        .section-badge {
+            display: inline-block; padding: 0.4rem 1rem;
+            background: rgba(108,99,255,0.1); border: 1px solid rgba(108,99,255,0.2);
+            border-radius: 999px; color: var(--accent-cyan); font-size: 0.8rem; font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700;
+            color: #fff; margin-bottom: 1.5rem;
+        }
+        .section-title span { color: var(--accent); }
+        .section-desc {
+            font-size: 1.1rem; color: var(--text-secondary);
+            max-width: 600px; line-height: 1.7;
+        }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header .section-desc { margin: 0 auto; }
+
+        /* ---- ABOUT ---- */
+        #about { position: relative; overflow: hidden; }
+        .about-bg {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, var(--bg-dark), #0f172a, var(--bg-dark));
+        }
+        .about-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 3rem;
+        }
+        .about-card { padding: 1.5rem; text-align: center; }
+        .about-card-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-cyan));
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 1rem; color: #fff; font-weight: 700; font-size: 1.1rem;
+        }
+        .about-card h3 { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+        .about-card p { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; }
+        @media (min-width: 768px) { .about-grid { grid-template-columns: repeat(4, 1fr); } }
+
+        .tech-stack { text-align: center; margin-bottom: 3rem; }
+        .tech-stack h3 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem; }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+        .tech-tag {
+            padding: 0.5rem 1rem; background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
+            font-size: 0.875rem; color: var(--text-secondary); transition: all 0.2s;
+        }
+        .tech-tag:hover { border-color: rgba(0,212,255,0.3); color: #fff; }
+
+        /* ---- HOW IT WORKS ---- */
+        .how-it-works { position: relative; overflow: hidden; }
+        .how-bg {
+            position: absolute; inset: 0;
+        }
+        .how-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.1; }
+        .how-bg-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(10,10,15,0.9), rgba(10,10,15,0.85), rgba(10,10,15,0.9));
+        }
+        .how-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 800px; margin: 0 auto; }
+        @media (min-width: 768px) { .how-grid { grid-template-columns: repeat(3, 1fr); } }
+        .how-step { text-align: center; position: relative; }
+        .how-step-num {
+            width: 80px; height: 80px; border-radius: 16px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-cyan));
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 1.5rem; color: #fff; font-size: 1.5rem; font-weight: 700;
+        }
+        .how-step h3 { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; }
+        .how-step p { color: var(--text-secondary); line-height: 1.6; }
+
+        /* ---- SERVICES ---- */
+        #services { position: relative; overflow: hidden; }
+        .services-bg {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, var(--bg-dark), #0a0a1a, var(--bg-dark));
+        }
+        .services-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; max-width: 900px; margin: 0 auto 3rem; }
+        @media (min-width: 768px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+        .service-card { padding: 2rem; }
+        .service-card-icon {
+            width: 56px; height: 56px; border-radius: 14px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-cyan));
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 1.25rem; color: #fff;
+            transition: transform 0.3s;
+        }
+        .service-card:hover .service-card-icon { transform: scale(1.1); }
+        .service-card h3 { font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; }
+        .service-card p { color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem; }
+        .service-features { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+        .service-features li { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary); }
+        .service-features li svg { width: 16px; height: 16px; color: var(--accent-cyan); flex-shrink: 0; }
+
+        .who-for {
+            max-width: 800px; margin: 0 auto 3rem; padding: 2rem;
+        }
+        .who-for h3 { font-size: 1.2rem; font-weight: 700; color: #fff; text-align: center; margin-bottom: 1.5rem; }
+        .who-for-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+        @media (min-width: 768px) { .who-for-grid { grid-template-columns: repeat(3, 1fr); } }
+        .who-for-item { text-align: center; }
+        .who-for-item h4 { font-weight: 600; color: #fff; margin-bottom: 0.5rem; }
+        .who-for-item p { font-size: 0.875rem; color: var(--text-secondary); }
+
+        /* ---- PROJECTS / INNOVATION LAB ---- */
+        .projects-section { position: relative; overflow: hidden; }
+        .projects-bg { position: absolute; inset: 0; }
+        .projects-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.1; }
+        .projects-bg-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(10,10,15,0.9), rgba(10,10,15,0.85), rgba(10,10,15,0.9));
+        }
+        .projects-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+        @media (min-width: 640px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 768px) { .projects-grid { grid-template-columns: repeat(4, 1fr); } }
+        .project-card { display: block; text-decoration: none; color: inherit; overflow: hidden; }
+        .project-card-img { position: relative; height: 160px; overflow: hidden; }
+        .project-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .project-card:hover .project-card-img img { transform: scale(1.05); }
+        .project-card-img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, var(--bg-dark), transparent); }
+        .project-card-body { padding: 1.5rem; }
+        .project-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+        .project-card h3 { font-size: 1.1rem; font-weight: 700; color: #fff; transition: color 0.2s; }
+        .project-card:hover h3 { color: var(--accent-cyan); }
+        .project-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem; }
+        .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .project-tag { padding: 0.2rem 0.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; font-size: 0.7rem; color: var(--text-secondary); }
+
+        /* ---- PRICING ---- */
+        #pricing { position: relative; overflow: hidden; }
+        .pricing-bg {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, var(--bg-dark), #0f172a, var(--bg-dark));
+        }
+        .pricing-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; max-width: 1100px; margin: 0 auto 2rem; }
+        @media (min-width: 768px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .pricing-grid { grid-template-columns: repeat(4, 1fr); } }
+        .pricing-card { padding: 2rem; display: flex; flex-direction: column; position: relative; }
+        .pricing-card.popular { border-color: rgba(0,212,255,0.4); box-shadow: 0 4px 25px rgba(0,212,255,0.1); }
+        .pricing-popular-badge {
+            position: absolute; top: 1rem; right: 1rem;
+            padding: 0.2rem 0.6rem; background: rgba(0,212,255,0.15);
+            color: var(--accent-cyan); font-size: 0.7rem; font-weight: 700; border-radius: 999px;
+        }
+        .pricing-card-top-bar { position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-cyan)); border-radius: 16px 16px 0 0; }
+        .pricing-card h3 { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.25rem; }
+        .pricing-price { margin-bottom: 0.75rem; }
+        .pricing-price .currency { font-size: 0.875rem; color: var(--text-secondary); }
+        .pricing-price .amount { font-size: 2rem; font-weight: 700; color: #fff; }
+        .pricing-price .note { font-size: 0.875rem; color: var(--text-secondary); }
+        .pricing-card-desc { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem; }
+        .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.5rem; flex: 1; }
+        .pricing-features li { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary); }
+        .pricing-features li svg { width: 16px; height: 16px; color: var(--accent-cyan); flex-shrink: 0; margin-top: 2px; }
+        .pricing-card .btn { width: 100%; text-align: center; font-size: 0.875rem; }
+
+        .addons { max-width: 700px; margin: 0 auto 3rem; padding: 2rem; }
+        .addons h3 { font-size: 1.2rem; font-weight: 700; color: #fff; text-align: center; margin-bottom: 1.5rem; }
+        .addons-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        @media (min-width: 768px) { .addons-grid { grid-template-columns: repeat(2, 1fr); } }
+        .addon-item { display: flex; align-items: center; justify-content: space-between; padding: 1rem; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
+        .addon-service { font-size: 0.875rem; color: var(--text-secondary); }
+        .addon-price { font-size: 0.875rem; font-weight: 600; color: #fff; }
+
+        /* ---- FAQ ---- */
+        .faq-section { position: relative; overflow: hidden; }
+        .faq-bg { position: absolute; inset: 0; }
+        .faq-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.1; }
+        .faq-bg-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(10,10,15,0.9), rgba(10,10,15,0.85), rgba(10,10,15,0.9));
+        }
+        .faq-grid { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+        .faq-item { padding: 1.5rem; }
+        .faq-item h3 { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+        .faq-item p { color: var(--text-secondary); line-height: 1.6; }
+
+        /* ---- CONTACT ---- */
+        #contact { position: relative; overflow: hidden; }
+        .contact-bg {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, var(--bg-dark), #0f172a, var(--bg-dark));
+        }
+        .contact-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 900px; margin: 0 auto; }
+        @media (min-width: 1024px) { .contact-grid { grid-template-columns: 2fr 3fr; } }
+        .contact-info-cards { display: flex; flex-direction: column; gap: 1.5rem; }
+        .contact-info-card { padding: 1.5rem; }
+        .contact-info-card h3 { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+        .contact-info-item { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+        .contact-info-icon {
+            width: 40px; height: 40px; border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .contact-info-icon svg { width: 20px; height: 20px; color: var(--accent-cyan); }
+        .contact-info-label { font-size: 0.7rem; color: var(--text-secondary); }
+        .contact-info-value { font-size: 0.875rem; color: #fff; }
+        .contact-info-value a { color: inherit; text-decoration: none; transition: color 0.2s; }
+        .contact-info-value a:hover { color: var(--accent-cyan); }
+        .contact-why-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .contact-why-list li { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary); }
+        .contact-why-list li svg { width: 16px; height: 16px; color: var(--green); flex-shrink: 0; }
+
+        .contact-form-card { padding: 2rem; border-radius: 16px; }
+        .form-steps { display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 2rem; }
+        .form-step-bar { height: 4px; width: 48px; border-radius: 999px; background: rgba(255,255,255,0.1); transition: background 0.3s; }
+        .form-step-bar.active { background: var(--accent); }
+        .form-step-title { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.25rem; }
+        .form-step-subtitle { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem; }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: none; }
+        .form-input {
+            width: 100%; padding: 0.875rem 1rem;
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px; color: #fff; font-size: 0.9rem; font-family: inherit;
+            outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-input::placeholder { color: rgba(255,255,255,0.35); }
+        .form-input:focus { border-color: var(--accent-cyan); box-shadow: 0 0 0 3px rgba(0,212,255,0.1); }
+        .form-input.error { border-color: #ef4444; }
+        .form-error { color: #f87171; font-size: 0.8rem; margin-top: 0.25rem; }
+        .form-row { display: flex; gap: 1rem; }
+        .form-row .btn { flex: 1; }
+        .form-success { text-align: center; padding: 2rem; }
+        .form-success-icon {
+            width: 80px; height: 80px; border-radius: 50%;
+            background: rgba(34,197,94,0.15); display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        .form-success-icon svg { width: 40px; height: 40px; color: #4ade80; }
+        .form-success h2 { font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+        .form-success p { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
+
+        /* ---- FOOTER ---- */
+        footer { position: relative; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.05); }
+        .footer-bg { position: absolute; inset: 0; background: linear-gradient(to bottom, var(--bg-dark), #0a0a1a); }
+        .footer-inner { position: relative; z-index: 10; padding: 3rem 0; }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 2rem; }
+        @media (min-width: 768px) { .footer-grid { grid-template-columns: repeat(4, 1fr); } }
+        .footer-brand h3 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; }
+        .footer-brand h3 span { color: var(--accent); }
+        .footer-brand p { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; }
+        .footer-col h4 { font-weight: 600; color: #fff; margin-bottom: 1rem; }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+        .footer-col a { font-size: 0.875rem; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--accent-cyan); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 1.5rem; display: flex; flex-wrap: wrap;
+            align-items: center; justify-content: space-between; gap: 1rem;
+        }
+        .footer-bottom p { font-size: 0.875rem; color: var(--text-secondary); }
+        .footer-bottom p b { color: #fff; }
+
+        /* ---- WHATSAPP BUTTON ---- */
+        .whatsapp-btn {
+            position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 40;
+            width: 52px; height: 52px; border-radius: 50%;
+            background: #22c55e; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 20px rgba(34,197,94,0.4);
+            transition: all 0.3s; border: none; cursor: pointer;
+        }
+        .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 4px 25px rgba(34,197,94,0.5); }
+        .whatsapp-btn:active { transform: scale(0.95); }
+        .whatsapp-btn svg { width: 26px; height: 26px; color: #fff; }
+
+        /* ---- UTILITIES ---- */
+        .relative { position: relative; }
+        .z-10 { z-index: 10; }
+        .text-center { text-align: center; }
+        .mt-2 { margin-top: 0.5rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+    </style>
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-glow-1"></div>
+        <div class="preloader-glow-2"></div>
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <div class="preloader-logo-icon">o</div>
+                <span class="preloader-logo-text">omix<span>systems</span></span>
+            </div>
+            <p class="preloader-tagline">Optimal Modular Integration Experts</p>
+            <div class="preloader-card">
+                <div class="preloader-stats">
+                    <div>
+                        <div class="preloader-stat-val mono">150+</div>
+                        <div class="preloader-stat-label">Projects</div>
+                    </div>
+                    <div>
+                        <div class="preloader-stat-val mono">50+</div>
+                        <div class="preloader-stat-label">Clients</div>
+                    </div>
+                </div>
+                <div class="preloader-divider">
+                    <div class="preloader-stat-label" style="margin-bottom:0.5rem">Services</div>
+                    <div class="preloader-services">
+                        <span class="preloader-service-tag">SaaS Dev</span>
+                        <span class="preloader-service-tag">Web Dev</span>
+                        <span class="preloader-service-tag">Mobile Apps</span>
+                        <span class="preloader-service-tag">APIs</span>
+                    </div>
+                </div>
+                <div class="preloader-divider">
+                    <div class="preloader-stat-label" style="margin-bottom:0.5rem">Contact</div>
+                    <div class="preloader-contact">
+                        <div class="preloader-contact-item"><span>&#9993;</span> omixsystems@gmail.com</div>
+                        <div class="preloader-contact-item"><span>&#128205;</span> Kericho, Kenya</div>
+                    </div>
+                </div>
+            </div>
+            <div class="preloader-progress-bar"><div class="preloader-progress-fill" id="preloader-progress"></div></div>
+            <p class="preloader-loading-text">Loading...</p>
+        </div>
+        <div class="preloader-bottom">Fast, Conversion-Focused Websites</div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-inner">
+                <a class="nav-logo" href="#home">omix<span>systems</span></a>
+                <div class="nav-links">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#contact" class="nav-cta">Get Started</a>
+                </div>
+                <button class="nav-mobile-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="display:none"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <div class="nav-mobile-menu" id="mobile-menu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact" class="nav-cta" style="display:inline-block;margin-top:0.5rem">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home">
+        <div class="hero-bg">
+            <img src="assets/hero-bg.jpg" alt="">
+            <div class="hero-bg-overlay"></div>
+        </div>
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+        <div class="hero-content container">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Optimal Modular Integration Experts
+            </div>
+            <h1 class="hero-title">
+                Building Modern <span class="hero-title-gradient">SaaS Solutions</span> for Tomorrow's Businesses
+            </h1>
+            <p class="hero-desc">
+                Transforming ideas into scalable digital products with our modular integration approach. Based in <strong>Kericho, Kenya</strong> — delivering global standards.
+            </p>
+            <div class="hero-ctas">
+                <a href="#contact" class="btn btn-primary">
+                    Start Your Project
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                </a>
+                <a href="#services" class="btn btn-outline">View Services</a>
+            </div>
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <div class="hero-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+                    <div class="hero-feature-text"><div class="hero-feature-label">7-Day Delivery</div><div class="hero-feature-desc">Fast turnaround, no excuses</div></div>
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+                    <div class="hero-feature-text"><div class="hero-feature-label">Money-Back Guarantee</div><div class="hero-feature-desc">If you are not happy, we fix it</div></div>
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+                    <div class="hero-feature-text"><div class="hero-feature-label">Free Revisions</div><div class="hero-feature-desc">Until you love the result</div></div>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div><div class="hero-stat-val">150+</div><div class="hero-stat-label">Projects</div></div>
+                <div><div class="hero-stat-val">50+</div><div class="hero-stat-label">Clients</div></div>
+                <div><div class="hero-stat-val">2x</div><div class="hero-stat-label">More Leads</div></div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <div class="hero-scroll-indicator"><div></div></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="about-bg"></div>
+        <div class="container relative z-10">
+            <div class="section-header">
+                <div class="section-badge">About Us</div>
+                <h2 class="section-title">Why <span>Omixsystems</span>?</h2>
+                <p class="section-desc">Founded in Kericho, Kenya in 2025, we make enterprise-grade technology accessible to businesses of all sizes. No fluff — just clean code, fast delivery, and results that matter.</p>
+            </div>
+            <div class="about-grid">
+                <div class="glass-card about-card">
+                    <div class="about-card-icon">01</div>
+                    <h3>Modular Approach</h3>
+                    <p>Flexible, scalable solutions built with a modular architecture for easy integration and future growth.</p>
+                </div>
+                <div class="glass-card about-card">
+                    <div class="about-card-icon">02</div>
+                    <h3>Local Expertise</h3>
+                    <p>Deep understanding of the African and Kenyan market needs, infrastructure, and business culture.</p>
+                </div>
+                <div class="glass-card about-card">
+                    <div class="about-card-icon">03</div>
+                    <h3>Modern Stack</h3>
+                    <p>Built using cutting-edge technologies like React, Next.js, Node.js, and cloud-native architectures.</p>
+                </div>
+                <div class="glass-card about-card">
+                    <div class="about-card-icon">04</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Agile development methodology ensuring your project launches on time without compromising quality.</p>
+                </div>
+            </div>
+            <div class="tech-stack">
+                <h3>Our Tech Stack</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">Python</span>
+                    <span class="tech-tag">PostgreSQL</span><span class="tech-tag">MongoDB</span><span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Vercel</span><span class="tech-tag">Docker</span><span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">GraphQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works page-section">
+        <div class="how-bg">
+            <img src="assets/how-bg.jpg" alt="">
+            <div class="how-bg-overlay"></div>
+        </div>
+        <div class="container relative z-10">
+            <div class="section-header">
+                <h2 class="section-title">How It <span>Works</span></h2>
+                <p class="section-desc">A simple, transparent process from idea to launch.</p>
+            </div>
+            <div class="how-grid">
+                <div class="how-step">
+                    <div class="how-step-num">01</div>
+                    <h3>Discovery</h3>
+                    <p>We analyze your requirements and create a detailed roadmap.</p>
+                </div>
+                <div class="how-step">
+                    <div class="how-step-num">02</div>
+                    <h3>Design & Dev</h3>
+                    <p>Our team builds your solution with clean, modular, scalable code.</p>
+                </div>
+                <div class="how-step">
+                    <div class="how-step-num">03</div>
+                    <h3>Deploy & Support</h3>
+                    <p>We handle production deployment and provide ongoing monitoring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="services-bg"></div>
+        <div class="container relative z-10">
+            <div class="section-header">
+                <div class="section-badge">Our Services</div>
+                <h2 class="section-title">Everything You Need to <span>Succeed Online</span></h2>
+                <p class="section-desc">From design to launch, we handle everything so you can focus on growing your business.</p>
+            </div>
+            <div class="services-grid">
+                <div class="glass-card service-card">
+                    <div class="service-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+                    </div>
+                    <h3>SaaS Platform Development</h3>
+                    <p>Custom cloud platforms built for scale. We help you transform your business logic into a scalable, multi-tenant digital product.</p>
+                    <ul class="service-features">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Multi-tenant Architecture</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Cloud Infrastructure</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> API First Design</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Subscription Models</li>
+                    </ul>
+                </div>
+                <div class="glass-card service-card">
+                    <div class="service-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                    </div>
+                    <h3>Website Development</h3>
+                    <p>Modern, high-converting websites for businesses. Focused on performance, SEO, and seamless user experiences on all devices.</p>
+                    <ul class="service-features">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Responsive Design</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Modern UI/UX</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> SEO Optimization</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Fast Loading (Lighthouse 90+)</li>
+                    </ul>
+                </div>
+                <div class="glass-card service-card">
+                    <div class="service-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Native and cross-platform mobile solutions. We build powerful apps for iOS and Android that users love.</p>
+                    <ul class="service-features">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> iOS & Android Apps</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> React Native & Flutter</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> App Store Deployment</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Offline Capabilities</li>
+                    </ul>
+                </div>
+                <div class="glass-card service-card">
+                    <div class="service-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    </div>
+                    <h3>API Development</h3>
+                    <p>Robust, secure APIs that power your applications. RESTful and GraphQL APIs designed for performance and scalability.</p>
+                    <ul class="service-features">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> REST & GraphQL APIs</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Authentication & Security</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Documentation</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Third-party Integrations</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="glass-card who-for">
+                <h3>Who This Is For</h3>
+                <div class="who-for-grid">
+                    <div class="who-for-item">
+                        <h4>Local Businesses</h4>
+                        <p>Restaurants, salons, shops, clinics — any business that needs a professional online presence.</p>
+                    </div>
+                    <div class="who-for-item">
+                        <h4>Startups</h4>
+                        <p>Launch fast with a product that looks good, works well, and can scale as you grow.</p>
+                    </div>
+                    <div class="who-for-item">
+                        <h4>Online Sellers</h4>
+                        <p>E-commerce stores, service providers, and digital product creators ready to sell online.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INNOVATION LAB / PROJECTS -->
+    <section class="projects-section page-section">
+        <div class="projects-bg">
+            <img src="assets/lab-bg.jpg" alt="">
+            <div class="projects-bg-overlay"></div>
+        </div>
+        <div class="container relative z-10">
+            <div class="section-header">
+                <h2 class="section-title">Our <span>Innovation Lab</span></h2>
+                <p class="section-desc">Internal products demonstrating our modular integration approach.</p>
+            </div>
+            <div class="projects-grid">
+                <a href="https://omix-h2.onrender.com/" target="_blank" rel="noopener noreferrer" class="glass-card project-card">
+                    <div class="project-card-img">
+                        <img src="assets/project-code.jpg" alt="omixh2">
+                        <div class="project-card-img-overlay"></div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-top">
+                            <h3>omixh2</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color:var(--accent-cyan)"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                        </div>
+                        <p>Full-featured School Management Platform — managing students, staff, exams, and financials.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">School Management</span>
+                            <span class="project-tag">Admin Portal</span>
+                            <span class="project-tag">Data Systems</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://omnianalytics.vercel.app/" target="_blank" rel="noopener noreferrer" class="glass-card project-card">
+                    <div class="project-card-img">
+                        <img src="assets/project-analytics.jpg" alt="Fairytale">
+                        <div class="project-card-img-overlay"></div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-top">
+                            <h3>Fairytale</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color:var(--accent-cyan)"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                        </div>
+                        <p>Project tracking app for teams — manage tasks, milestones, and progress.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Task Tracking</span>
+                            <span class="project-tag">Team Collaboration</span>
+                            <span class="project-tag">Analytics</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://kora-ivory.vercel.app" target="_blank" rel="noopener noreferrer" class="glass-card project-card">
+                    <div class="project-card-img">
+                        <img src="assets/project-laptop.jpg" alt="Kora Hub">
+                        <div class="project-card-img-overlay"></div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-top">
+                            <h3>Kora Hub</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color:var(--accent-cyan)"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                        </div>
+                        <p>Learn web development from scratch — interactive courses, hands-on projects.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Web Dev Courses</span>
+                            <span class="project-tag">Interactive Learning</span>
+                            <span class="project-tag">Community</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://stor1-web.onrender.com" target="_blank" rel="noopener noreferrer" class="glass-card project-card">
+                    <div class="project-card-img">
+                        <img src="assets/project-store.jpg" alt="Omix Store">
+                        <div class="project-card-img-overlay"></div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-top">
+                            <h3>Omix Store</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color:var(--accent-cyan)"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                        </div>
+                        <p>Buy and sell in Kericho — a local marketplace connecting buyers and sellers in the community.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">E-Commerce</span>
+                            <span class="project-tag">Local Marketplace</span>
+                            <span class="project-tag">Kericho</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+        <div class="pricing-bg"></div>
+        <div class="container relative z-10">
+            <div class="section-header">
+                <div class="section-badge">Pricing</div>
+                <h2 class="section-title">Transparent <span>Pricing</span></h2>
+                <p class="section-desc">No hidden fees. No surprises. Pay once, own it forever.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="glass-card pricing-card">
+                    <h3>Starter Website</h3>
+                    <div class="pricing-price"><span class="currency">KES </span><span class="amount">25,000</span><span class="note"> one-time</span></div>
+                    <p class="pricing-card-desc">Perfect for small businesses getting online for the first time.</p>
+                    <ul class="pricing-features">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Up to 5 pages</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Mobile responsive design</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Contact form</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Google Maps integration</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Basic SEO setup</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 2 rounds of revisions</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+                <div class="glass-card pricing-card popular">
+                    <div class="pricing-card-top-bar"></div>
+                    <div class="pricing-popular-badge">Popular</div>
+                    <h3>Business Website</h3>
+                    <div class="pricing-price"><span class="currency">KES </span><span class="amount">45,000</span><span class="note"> one-time</span></div>
+                    <p class="pricing-card-desc">For growing businesses that need more than a basic site.</p>
+                    <ul class="pricing-features">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Up to 10 pages</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Custom design + branding</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Blog section</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Social media integration</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Booking / inquiry system</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Lighthouse 90+ performance</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 30-day post-launch support</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> SEO foundation with schema</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="glass-card pricing-card">
+                    <h3>E-Commerce Store</h3>
+                    <div class="pricing-price"><span class="currency">KES </span><span class="amount">80,000</span><span class="note"> from</span></div>
+                    <p class="pricing-card-desc">A full online store built to sell and scale.</p>
+                    <ul class="pricing-features">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Custom product catalogue</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> M-Pesa + card payments</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Inventory management</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Customer accounts</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Order notifications</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> SEO-optimised product pages</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 60-day post-launch support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+                <div class="glass-card pricing-card">
+                    <h3>Custom / SaaS</h3>
+                    <div class="pricing-price"><span class="currency">KES </span><span class="amount">150,000</span><span class="note"> from</span></div>
+                    <p class="pricing-card-desc">Bespoke web applications, dashboards, and platforms.</p>
+                    <ul class="pricing-features">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Custom architecture</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> API integrations</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> User management</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Subscription billing</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Admin dashboard</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Dedicated project manager</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Ongoing support available</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Add-ons -->
+            <div class="glass-card addons">
+                <h3>Add-on Services</h3>
+                <div class="addons-grid">
+                    <div class="addon-item"><span class="addon-service">Website maintenance</span><span class="addon-price">KES 5,000 - 10,000 / month</span></div>
+                    <div class="addon-item"><span class="addon-service">SEO optimisation</span><span class="addon-price">KES 15,000 - 30,000 / month</span></div>
+                    <div class="addon-item"><span class="addon-service">Content updates</span><span class="addon-price">KES 3,000 - 5,000 / update</span></div>
+                    <div class="addon-item"><span class="addon-service">Hosting + domain management</span><span class="addon-price">KES 2,000 - 5,000 / month</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section page-section">
+        <div class="faq-bg">
+            <img src="assets/pricing-bg.jpg" alt="">
+            <div class="faq-bg-overlay"></div>
+        </div>
+        <div class="container relative z-10">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+            </div>
+            <div class="faq-grid">
+                <div class="glass-card faq-item">
+                    <h3>How long does it take to build a website?</h3>
+                    <p>Most projects are completed within 7-14 days depending on complexity. Starter packages take 5-7 days, while more complex projects may take 2-3 weeks.</p>
+                </div>
+                <div class="glass-card faq-item">
+                    <h3>Do you offer ongoing maintenance?</h3>
+                    <p>Yes. We offer monthly maintenance packages starting at KES 5,000/month covering updates, fixes, and minor changes.</p>
+                </div>
+                <div class="glass-card faq-item">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept M-Pesa, bank transfers, and payment splits (50% upfront, 50% after completion).</p>
+                </div>
+                <div class="glass-card faq-item">
+                    <h3>Do you offer refunds?</h3>
+                    <p>Yes, if we are unable to deliver as promised, full refunds are available. We want you fully satisfied.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="contact-bg"></div>
+        <div class="container relative z-10">
+            <div class="section-header">
+                <div class="section-badge">Get In Touch</div>
+                <h2 class="section-title">Ready to <span>Get Started</span>?</h2>
+                <p class="section-desc">Tell us about your project. We will get back to you within one business day.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info-cards">
+                    <div class="glass-card contact-info-card">
+                        <h3>Contact Info</h3>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+                            <div><div class="contact-info-label">Email</div><div class="contact-info-value"><a href="mailto:omixsystems@gmail.com">omixsystems@gmail.com</a></div></div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon" style="background:rgba(34,197,94,0.1)"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" style="color:#22c55e"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></div>
+                            <div><div class="contact-info-label">WhatsApp</div><div class="contact-info-value"><a href="https://wa.me/254732649442" target="_blank" rel="noopener noreferrer">+254 732 649 442</a></div></div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+                            <div><div class="contact-info-label">Location</div><div class="contact-info-value">Kericho, Kenya</div></div>
+                        </div>
+                    </div>
+                    <div class="glass-card contact-info-card">
+                        <h3>Why Work With Us</h3>
+                        <ul class="contact-why-list">
+                            <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 7-day delivery guarantee</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Money-back guarantee</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Free revisions until you are happy</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 50+ successful projects</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> M-Pesa & bank transfer accepted</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contact-form-card glass-card" id="contact-form-container">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-bg"></div>
+        <div class="footer-inner container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>omix<span>systems</span></h3>
+                    <p>Building premium web applications and digital solutions for businesses worldwide. Based in Kericho, Kenya.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">SaaS Development</a></li>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Mobile Apps</a></li>
+                        <li><a href="#services">API Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:omixsystems@gmail.com">omixsystems@gmail.com</a></li>
+                        <li><a href="https://wa.me/254732649442" target="_blank" rel="noopener noreferrer" style="color:#22c55e">WhatsApp: +254 732 649 442</a></li>
+                        <li><a href="#">Kericho, Kenya</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="footer-year"></span> <b>Omix</b>. All rights reserved. Full-Stack Web Development Agency.</p>
+                <p>Built in Kenya</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP BUTTON -->
+    <button class="whatsapp-btn" onclick="window.open('https://wa.me/254732649442?text=Hi,%20I%20want%20a%20website%20from%20Omix','_blank')" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+    <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
