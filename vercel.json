@@ -3,6 +3,13 @@
   "buildCommand": null,
   "installCommand": null,
   "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/favicon.png",
+      "destination": "/favicon.svg",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
