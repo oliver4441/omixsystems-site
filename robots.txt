@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://omixsystems.com/sitemap.xml
+Sitemap: https://omixsystems.store/sitemap.xml
