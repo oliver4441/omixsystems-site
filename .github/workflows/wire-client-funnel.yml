@@ -1,0 +1,56 @@
+name: Wire OMIX Client Funnel
+
+on:
+  push:
+    paths:
+      - '.github/workflows/wire-client-funnel.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  wire:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Wire quote and WhatsApp CTAs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          index = Path('index.html')
+          text = index.read_text(encoding='utf-8')
+
+          # Route project/action buttons to the dedicated quote flow while
+          # leaving ordinary Contact navigation pointing to the contact section.
+          text = re.sub(r'(<a\s+)(href="#contact")(?=\s+class="btn\b)', r'\1href="quote.html"', text)
+          text = text.replace('href="#contact" class="nav-cta"', 'href="quote.html" class="nav-cta"')
+
+          # Route the floating WhatsApp button and visible WhatsApp contact to 0768 213 649.
+          text = text.replace('https://wa.me/254732649442', 'https://wa.me/254768213649')
+          text = text.replace('+254 732 649 442', '+254 768 213 649')
+
+          index.write_text(text, encoding='utf-8')
+
+          script = Path('script.js')
+          if script.exists():
+              s = script.read_text(encoding='utf-8')
+              s = s.replace("bar.href = '#contact'", "bar.href = 'quote.html'")
+              script.write_text(s, encoding='utf-8')
+          PY
+
+      - name: Commit changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html script.js
+          if git diff --cached --quiet; then
+            echo 'No changes required.'
+            exit 0
+          fi
+          git commit -m 'Wire homepage CTAs to client quote flow'
+          git push
