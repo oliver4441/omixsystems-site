@@ -1,0 +1,34 @@
+name: Fix Highlight Text Contrast
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  fix:
+    if: ${{ !contains(github.event.head_commit.message, 'Improve yellow highlight text contrast') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply contrast override
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text()
+          override = '''\n<style id="highlight-contrast">\n.hero-copy strong,.eyebrow,.nav-links a:hover,.nav-links a.active,.nav-mobile-btn,.nav-mobile-menu a:hover,.btn-acid,.service-card:nth-child(2),.pricing-card.popular{color:#111!important}\n.hero-copy strong{text-shadow:none}\n</style>\n'''
+          if 'id="highlight-contrast"' not in s:
+              s = s.replace('</head>', override + '</head>', 1)
+          p.write_text(s)
+          PY
+      - name: Commit fix and remove workflow
+        run: |
+          git config user.name "Oliver"
+          git config user.email "173495825+oliver4441@users.noreply.github.com"
+          git add index.html
+          git commit -m "Improve yellow highlight text contrast"
+          git rm .github/workflows/fix-highlight-contrast.yml
+          git commit -m "Remove temporary contrast workflow"
+          git push origin main
