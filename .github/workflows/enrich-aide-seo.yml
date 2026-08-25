@@ -1,0 +1,42 @@
+name: Enrich Aide SEO Metadata
+on:
+  workflow_dispatch:
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Update Aide CTA and metadata
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text()
+          anchor = '<a href="#apps" class="btn btn-acid">View Our Apps</a>'
+          aide_cta = '<a href="https://aide.omixsystems.store" class="btn btn-light" target="_blank" rel="noopener noreferrer">Try Aide →</a>'
+          if 'href="https://aide.omixsystems.store" class="btn btn-light"' not in s and anchor in s:
+              s = s.replace(anchor, anchor + aide_cta, 1)
+          marker = '"address":{"@type":"PostalAddress","addressLocality":"Kericho","addressCountry":"KE"}'
+          addition = ',"owns":{"@type":"SoftwareApplication","name":"Aide","url":"https://aide.omixsystems.store","applicationCategory":"BusinessApplication","description":"Offline-first business management software from OMIX Digital Solutions for small businesses."}'
+          if '"name":"Aide"' not in s:
+              s = s.replace(marker, marker + addition, 1)
+          og_anchor = '<meta property="og:type" content="website">'
+          og_extra = '<meta property="og:see_also" content="https://aide.omixsystems.store">'
+          if 'property="og:see_also"' not in s:
+              s = s.replace(og_anchor, og_anchor + og_extra, 1)
+          p.write_text(s)
+          PY
+      - name: Commit
+        shell: bash
+        run: |
+          if git diff --quiet -- index.html; then exit 0; fi
+          git config user.name "Oliver"
+          git config user.email "173495825+oliver4441@users.noreply.github.com"
+          git add index.html
+          git commit -m "Add Aide CTA and SEO metadata"
+          git push origin main
