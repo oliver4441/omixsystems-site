@@ -1,0 +1,50 @@
+name: Add Aide App Card
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  add-aide:
+    if: ${{ !contains(github.event.head_commit.message, 'Add Aide app card') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add Aide card
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text()
+          if 'href="https://aide.omixsystems.store"' in s:
+              print('Aide card already exists; nothing to do.')
+              raise SystemExit(0)
+          marker = '<div class="apps-grid">'
+          card = '''<a class="app-card" href="https://aide.omixsystems.store" target="_blank" rel="noopener noreferrer">
+          <div class="app-card-top"><span class="app-no">APP / 01</span><h3>AIDE</h3></div>
+          <div class="app-card-body"><p>A practical digital management platform designed to help small businesses replace paperwork with simple, reliable workflows.</p><div class="app-tags"><span class="app-tag">BUSINESS</span><span class="app-tag">MANAGEMENT</span><span class="app-tag">OFFLINE-FIRST</span></div><span class="app-link">Open Aide →</span></div>
+          </a>'''
+          if marker not in s:
+              raise SystemExit('Apps grid marker not found')
+          s = s.replace(marker, marker + '\n' + card, 1)
+          p.write_text(s)
+          PY
+
+      - name: Commit Aide card
+        shell: bash
+        run: |
+          if git diff --quiet -- index.html; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git config user.name "Oliver"
+          git config user.email "173495825+oliver4441@users.noreply.github.com"
+          git add index.html
+          git commit -m "Add Aide app card"
+          git push origin main
