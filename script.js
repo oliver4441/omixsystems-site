@@ -169,7 +169,7 @@
 
     function setupStickyMobileCTA() {
         if (window.innerWidth > 899 || document.querySelector('.mobile-project-cta')) return;
-        var bar = document.createElement('a'); bar.href = '#contact'; bar.className = 'mobile-project-cta'; bar.innerHTML = '<span>START A PROJECT</span><span aria-hidden="true">→</span>'; document.body.appendChild(bar);
+        var bar = document.createElement('a'); bar.href = 'quote.html'; bar.className = 'mobile-project-cta'; bar.innerHTML = '<span>START A PROJECT</span><span aria-hidden="true">→</span>'; document.body.appendChild(bar);
         var hero = document.getElementById('home'); var contact = document.getElementById('contact');
         function updateBar() { if (!hero || !contact) return; var pastHero = window.scrollY > hero.offsetHeight * 0.72; var nearContact = window.scrollY + window.innerHeight > contact.offsetTop - 120; bar.classList.toggle('mobile-project-cta-visible', pastHero && !nearContact); }
         window.addEventListener('scroll', updateBar, { passive: true }); updateBar();
