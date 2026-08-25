@@ -1,0 +1,34 @@
+name: Fix Highlight Text Contrast
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fix yellow highlight contrast
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text()
+          override = '''\n/* Accessibility: keep text readable on OMIX yellow highlights. */\n<style>\n.hero-copy strong,\n.eyebrow,\n.nav-links a:hover,\n.nav-links a.active,\n.nav-mobile-btn,\n.nav-mobile-menu a:hover,\n.btn-acid,\n.service-card:nth-child(2),\n.pricing-card.popular { color: #111 !important; }\n.hero-copy strong { text-shadow: none; }\n</style>\n'''
+          if 'Accessibility: keep text readable on OMIX yellow highlights.' not in s:
+              s = s.replace('</head>', override + '</head>', 1)
+          p.write_text(s)
+          PY
+      - name: Commit
+        shell: bash
+        run: |
+          if git diff --quiet -- index.html; then exit 0; fi
+          git config user.name "Oliver"
+          git.config user.email "173495825+oliver4441@users.noreply.github.com" 2>/dev/null || true
+          git config user.email "173495825+oliver4441@users.noreply.github.com"
+          git add index.html
+          git commit -m "Improve yellow highlight text contrast"
+          git push origin main
