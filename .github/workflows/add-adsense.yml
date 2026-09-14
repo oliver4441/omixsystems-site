@@ -15,27 +15,37 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Add AdSense script safely
+      - name: Add AdSense tags safely
         run: |
           python - <<'PY'
           from pathlib import Path
 
           path = Path('index.html')
           text = path.read_text(encoding='utf-8')
+          meta = '<meta name="google-adsense-account" content="ca-pub-2597448028967441">'
           script = '''<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2597448028967441"
-     crossorigin="anonymous"></script>'''
+               crossorigin="anonymous"></script>'''
 
-          if 'ca-pub-2597448028967441' in text:
-              print('AdSense script already present; no changes needed.')
-              raise SystemExit(0)
-
+          changed = False
           marker = '</head>'
-          if marker not in text:
-              raise SystemExit('Safety check failed: </head> was not found.')
 
-          text = text.replace(marker, script + '\n' + marker, 1)
-          path.write_text(text, encoding='utf-8')
-          print('AdSense script added before </head>.')
+          if 'google-adsense-account' not in text:
+              if marker not in text:
+                  raise SystemExit('Safety check failed: </head> was not found.')
+              text = text.replace(marker, meta + '\n' + marker, 1)
+              changed = True
+
+          if 'ca-pub-2597448028967441' not in text:
+              if marker not in text:
+                  raise SystemExit('Safety check failed: </head> was not found.')
+              text = text.replace(marker, script + '\n' + marker, 1)
+              changed = True
+
+          if changed:
+              path.write_text(text, encoding='utf-8')
+              print('AdSense tags added before </head>.')
+          else:
+              print('AdSense tags already present; no changes needed.')
           PY
 
       - name: Commit change
