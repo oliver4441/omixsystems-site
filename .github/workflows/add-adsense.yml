@@ -49,3 +49,5 @@ jobs:
           git add index.html
           git commit -m 'Add Google AdSense'
           git push
+
+# Safe trigger to apply the AdSense insertion without replacing index.html manually.
