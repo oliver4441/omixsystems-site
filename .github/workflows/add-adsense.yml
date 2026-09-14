@@ -1,0 +1,51 @@
+name: Add AdSense
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  add-adsense:
+    if: ${{ !contains(github.event.head_commit.message, 'Add Google AdSense') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Add AdSense script safely
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+          script = '''<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2597448028967441"
+     crossorigin="anonymous"></script>'''
+
+          if 'ca-pub-2597448028967441' in text:
+              print('AdSense script already present; no changes needed.')
+              raise SystemExit(0)
+
+          marker = '</head>'
+          if marker not in text:
+              raise SystemExit('Safety check failed: </head> was not found.')
+
+          text = text.replace(marker, script + '\n' + marker, 1)
+          path.write_text(text, encoding='utf-8')
+          print('AdSense script added before </head>.')
+          PY
+
+      - name: Commit change
+        run: |
+          if git diff --quiet -- index.html; then
+            echo 'No change to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Add Google AdSense'
+          git push
