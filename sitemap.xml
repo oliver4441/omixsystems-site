@@ -10,4 +10,9 @@
   <url><loc>https://omixsystems.store/support.html</loc><priority>0.7</priority></url>
   <url><loc>https://omixsystems.store/quote.html</loc><priority>0.8</priority></url>
   <url><loc>https://blog.omixsystems.store/</loc><priority>0.8</priority></url>
-<url><loc>https://omixsystems.store/privacy.html</loc></url><url><loc>https://omixsystems.store/terms.html</loc></url></urlset>
+<url><loc>https://omixsystems.store/privacy.html</loc></url><url><loc>https://omixsystems.store/terms.html</loc></url>  <url><loc>https://omixsystems.store/journal/omix-digital-solutions.html</loc><priority>0.8</priority></url>
+  <url><loc>https://omixsystems.store/journal/software-development-kenya.html</loc><priority>0.8</priority></url>
+  <url><loc>https://omixsystems.store/journal/saas-platform-development-kenya.html</loc><priority>0.8</priority></url>
+  <url><loc>https://omixsystems.store/journal/mpesa-api-integrations-kenya.html</loc><priority>0.8</priority></url>
+  <url><loc>https://omixsystems.store/journal/business-systems-digital-infrastructure-kenya.html</loc><priority>0.8</priority></url>
+</urlset>
