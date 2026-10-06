@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://omixsystems.store/</loc><priority>1.0</priority></url>
-  <url><loc>https://omixsystems.store/company.html</loc><priority>0.8</priority></url>
-  <url><loc>https://omixsystems.store/products.html</loc><priority>0.9</priority></url>
-  <url><loc>https://omixsystems.store/services.html</loc><priority>0.9</priority></url>
-  <url><loc>https://omixsystems.store/infrastructure.html</loc><priority>0.8</priority></url>
-  <url><loc>https://omixsystems.store/cases.html</loc><priority>0.8</priority></url>
-  <url><loc>https://omixsystems.store/labs.html</loc><priority>0.7</priority></url>
-  <url><loc>https://omixsystems.store/support.html</loc><priority>0.7</priority></url>
-  <url><loc>https://omixsystems.store/quote.html</loc><priority>0.8</priority></url>
-  <url><loc>https://blog.omixsystems.store/</loc><priority>0.8</priority></url>
-<url><loc>https://omixsystems.store/privacy.html</loc></url><url><loc>https://omixsystems.store/terms.html</loc></url>  <url><loc>https://omixsystems.store/journal/omix-digital-solutions.html</loc><priority>0.8</priority></url>
-  <url><loc>https://omixsystems.store/journal/software-development-kenya.html</loc><priority>0.8</priority></url>
-  <url><loc>https://omixsystems.store/journal/saas-platform-development-kenya.html</loc><priority>0.8</priority></url>
-  <url><loc>https://omixsystems.store/journal/mpesa-api-integrations-kenya.html</loc><priority>0.8</priority></url>
-  <url><loc>https://omixsystems.store/journal/business-systems-digital-infrastructure-kenya.html</loc><priority>0.8</priority></url>
+  <url><loc>https://omixsystems.store/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://omixsystems.store/company.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://omixsystems.store/products.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://omixsystems.store/services.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://omixsystems.store/cases.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://omixsystems.store/infrastructure.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://omixsystems.store/labs.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://omixsystems.store/support.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://omixsystems.store/quote.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://omixsystems.store/network.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://omixsystems.store/privacy.html</loc></url>
+  <url><loc>https://omixsystems.store/terms.html</loc></url>
+  <url><loc>https://omixsystems.store/journal/omix-digital-solutions.html</loc></url>
+  <url><loc>https://omixsystems.store/journal/software-development-kenya.html</loc></url>
+  <url><loc>https://omixsystems.store/journal/saas-platform-development-kenya.html</loc></url>
+  <url><loc>https://omixsystems.store/journal/mpesa-api-integrations-kenya.html</loc></url>
+  <url><loc>https://omixsystems.store/journal/business-systems-digital-infrastructure-kenya.html</loc></url>
 </urlset>
