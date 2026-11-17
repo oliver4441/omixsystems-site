@@ -3,18 +3,52 @@
   "buildCommand": null,
   "installCommand": null,
   "outputDirectory": ".",
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Link",
-          "value": "<https://omixsystems.store/>; rel=\"canonical\""
-        }
-      ]
-    }
-  ],
   "redirects": [
+    {
+      "source": "/journal",
+      "destination": "https://blog.omixsystems.store/",
+      "permanent": true
+    },
+    {
+      "source": "/journal/",
+      "destination": "https://blog.omixsystems.store/",
+      "permanent": true
+    },
+    {
+      "source": "/journal/index.html",
+      "destination": "https://blog.omixsystems.store/",
+      "permanent": true
+    },
+    {
+      "source": "/journal/omix-digital-solutions.html",
+      "destination": "https://omixsystems.store/company.html",
+      "permanent": true
+    },
+    {
+      "source": "/journal/software-development-kenya.html",
+      "destination": "https://omixsystems.store/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/journal/saas-platform-development-kenya.html",
+      "destination": "https://blog.omixsystems.store/wiki/modular-software-systems",
+      "permanent": true
+    },
+    {
+      "source": "/journal/mpesa-api-integrations-kenya.html",
+      "destination": "https://blog.omixsystems.store/wiki/mpesa-stk-push-payment-lifecycle",
+      "permanent": true
+    },
+    {
+      "source": "/journal/business-systems-digital-infrastructure-kenya.html",
+      "destination": "https://blog.omixsystems.store/wiki/offline-first-business-software",
+      "permanent": true
+    },
+    {
+      "source": "/journal/:path*",
+      "destination": "https://blog.omixsystems.store/",
+      "permanent": true
+    },
     {
       "source": "/favicon.png",
       "destination": "/favicon.svg",
