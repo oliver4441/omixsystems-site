@@ -3,17 +3,6 @@
   "buildCommand": null,
   "installCommand": null,
   "outputDirectory": ".",
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Link",
-          "value": "<https://omixsystems.store/>; rel=\"canonical\""
-        }
-      ]
-    }
-  ],
   "redirects": [
     {
       "source": "/journal",
